@@ -1,0 +1,7 @@
+services:
+  openai-api:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      UPSTREAM: "https://api.openai.com/v1"
+    restart: unless-stopped
